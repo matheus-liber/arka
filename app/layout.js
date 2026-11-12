@@ -1,14 +1,21 @@
 import './globals.css';
+import SiteHeader from '../components/SiteHeader';
 
 export const metadata = {
-  title: 'Arka — Em Construção',
-  description: 'Ehvar e os Eldares estão narrando. Em breve, Arka se formará.',
+  title: {
+    default: 'Arka',
+    template: '%s — Arka',
+  },
+  description: 'As crônicas de Arka. Enciclopédia do cenário de alta fantasia medieval.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   );
 }
