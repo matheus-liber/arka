@@ -25,7 +25,8 @@ Leia, nesta ordem, quando o trabalho envolver lore, conteúdo ou arquitetura do 
 2. [docs/mapa-do-vault.md](docs/mapa-do-vault.md) — o que existe no Drive e o grau de maturidade
 3. [docs/contrato-espelho.md](docs/contrato-espelho.md) — como o Drive vira `content/lore/`
 4. [docs/rotas-do-site.md](docs/rotas-do-site.md) — árvore de rotas prevista
-5. [docs/assets.md](docs/assets.md) — artes em `public/assets/`
+5. [docs/estilizacao.md](docs/estilizacao.md) — cores, fontes, temas (`app/styles/tokens.css`)
+6. [docs/assets.md](docs/assets.md) — artes em `public/assets/`
 
 # Regras de arquitetura
 
@@ -36,4 +37,5 @@ Leia, nesta ordem, quando o trabalho envolver lore, conteúdo ou arquitetura do 
 - Arquivos vazios (0 bytes) e notas `Untitled*.md` não viram página pública.
 - O glossário Tolkien → Arka em `Assets/docs/Glossário.md` é ferramenta interna da equipe. Não publicar como página de lore; no site, usar só os nomes de Arka.
 - A política do site é publicar a lore do vault (cosmologia, geografia, história, Ash-Khala, facções, notas de sistema). O glossário de nomes da Terra-média é a exceção.
+- Identidade visual: só em [app/styles/tokens.css](app/styles/tokens.css). Não espalhar hex/rgb em componentes. Temas via `data-theme` no `<html>` (`dark`, `light`, `high-contrast`).
 - Artes do site: só em [`public/assets/`](public/assets/), na taxonomia da enciclopédia. Não espalhar imagens em `app/` nem ao lado das páginas. Ver [docs/assets.md](docs/assets.md).

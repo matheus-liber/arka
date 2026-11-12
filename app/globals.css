@@ -1,11 +1,4 @@
-:root {
-  color-scheme: dark;
-  --ink: #f0e6ce;
-  --muted-ink: #c5b997;
-  --gold: #d6b66f;
-  --deep: #111a19;
-  --panel: #1a2521;
-}
+@import './styles/tokens.css';
 
 * {
   box-sizing: border-box;
@@ -19,10 +12,10 @@ body {
 
 body {
   background:
-    radial-gradient(ellipse at 50% 42%, rgb(72 83 59 / 28%), transparent 58%),
-    linear-gradient(145deg, #111816, #20251d 52%, #101715);
+    radial-gradient(ellipse at 50% 42%, var(--bg-glow), transparent 58%),
+    var(--bg-body);
   color: var(--ink);
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-body);
 }
 
 a {
@@ -38,16 +31,16 @@ a {
   align-items: baseline;
   justify-content: space-between;
   gap: 0.85rem 1.5rem;
-  padding: 1rem 1.4rem;
-  border-bottom: 1px solid rgb(214 182 111 / 22%);
-  background: rgb(16 23 21 / 88%);
+  padding: 1rem var(--space-page-x);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-header);
   backdrop-filter: blur(10px);
 }
 
 .site-mark {
   color: var(--gold);
-  font-size: 1.15rem;
-  letter-spacing: 0.18em;
+  font-size: var(--text-mark);
+  letter-spacing: var(--tracking-mark);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -60,8 +53,8 @@ a {
 
 .site-nav a {
   color: var(--muted-ink);
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
+  font-size: var(--text-nav);
+  letter-spacing: var(--tracking-nav);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -80,11 +73,11 @@ a {
 
 .notice {
   position: relative;
-  width: min(100%, 48rem);
+  width: min(100%, var(--notice-max));
   padding: clamp(3rem, 9vw, 6rem) clamp(1.5rem, 7vw, 5rem);
-  border: 1px solid rgb(214 182 111 / 42%);
-  background: linear-gradient(160deg, rgb(31 43 36 / 94%), rgb(21 30 27 / 96%));
-  box-shadow: 0 1.5rem 5rem rgb(0 0 0 / 35%), inset 0 0 3rem rgb(214 182 111 / 4%);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-notice);
+  box-shadow: var(--shadow-notice);
   text-align: center;
 }
 
@@ -114,20 +107,20 @@ a {
 .sigil {
   margin-bottom: 1.5rem;
   color: var(--gold);
-  font-size: 1.5rem;
+  font-size: var(--text-sigil);
 }
 
 .eyebrow {
   margin: 0 0 0.8rem;
   color: var(--gold);
-  font-size: 0.78rem;
-  letter-spacing: 0.24em;
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
 }
 
 .landing h1 {
   margin: 0;
-  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-size: var(--text-landing-title);
   font-weight: 400;
   letter-spacing: 0.025em;
   line-height: 1.08;
@@ -141,7 +134,7 @@ a {
   gap: 1rem;
   margin: 1.8rem 0;
   color: var(--gold);
-  font-size: 1.15rem;
+  font-size: var(--text-mark);
 }
 
 .ornament span {
@@ -157,7 +150,7 @@ a {
 .message {
   margin: 0;
   color: var(--muted-ink);
-  font-size: clamp(1.08rem, 2.5vw, 1.35rem);
+  font-size: var(--text-message);
   line-height: 1.8;
 }
 
@@ -176,8 +169,8 @@ a {
 
 .landing-links a {
   color: var(--gold);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  font-size: var(--text-nav);
+  letter-spacing: var(--tracking-mark);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -187,16 +180,16 @@ a {
 }
 
 .page-shell {
-  width: min(100%, 58rem);
+  width: min(100%, var(--page-max));
   margin: 0 auto;
-  padding: 2.4rem 1.4rem 4.5rem;
+  padding: var(--space-page-y) var(--space-page-x) 4.5rem;
 }
 
 .page-heading h1 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 3.15rem);
+  font-size: var(--text-page-title);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--tracking-title);
   line-height: 1.12;
   text-wrap: balance;
 }
@@ -204,32 +197,32 @@ a {
 .lede {
   margin: 1.1rem 0 0;
   color: var(--muted-ink);
-  font-size: 1.12rem;
+  font-size: var(--text-body);
   line-height: 1.75;
 }
 
 .skeleton-note {
   margin: 1.6rem 0 0;
-  color: rgb(197 185 151 / 72%);
-  font-size: 0.92rem;
+  color: var(--note-muted);
+  font-size: var(--text-note);
   font-style: italic;
 }
 
 .skeleton-note code {
-  font-family: ui-monospace, Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.84em;
   font-style: normal;
   color: var(--gold);
 }
 
 .section-block {
-  margin-top: 2.4rem;
+  margin-top: var(--space-block);
 }
 
 .section-block h2 {
   margin: 0 0 0.9rem;
   color: var(--gold);
-  font-size: 0.78rem;
+  font-size: var(--text-eyebrow);
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -255,26 +248,26 @@ a {
   display: grid;
   gap: 0.25rem;
   padding: 0.95rem 1.1rem;
-  border: 1px solid rgb(214 182 111 / 28%);
-  background: rgb(26 37 33 / 55%);
+  border: 1px solid var(--border-default);
+  background: var(--bg-card);
   text-decoration: none;
 }
 
 .entry-card:hover {
-  border-color: rgb(214 182 111 / 55%);
+  border-color: var(--border-hover);
 }
 
 .entry-card.is-pending {
-  opacity: 0.72;
+  opacity: var(--pending-opacity);
 }
 
 .entry-title {
-  font-size: 1.15rem;
+  font-size: var(--text-card-title);
 }
 
 .entry-note {
   color: var(--muted-ink);
-  font-size: 0.92rem;
+  font-size: var(--text-note);
   line-height: 1.45;
 }
 
@@ -289,9 +282,9 @@ a {
 
 .name-list li {
   padding: 0.35rem 0.7rem;
-  border: 1px solid rgb(214 182 111 / 24%);
+  border: 1px solid var(--border-subtle);
   color: var(--muted-ink);
-  font-size: 0.92rem;
+  font-size: var(--text-note);
 }
 
 .empty-copy {
@@ -305,7 +298,7 @@ a {
 }
 
 .empty-copy code {
-  font-family: ui-monospace, Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.86em;
   color: var(--gold);
 }

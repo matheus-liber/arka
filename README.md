@@ -8,6 +8,7 @@ Hoje o site está na landing *Em Construção*. A lore vive no vault Obsidian co
 
 - Next.js 16 e React 19
 - App Router em `app/`
+- Identidade visual em [`app/styles/tokens.css`](app/styles/tokens.css) — ver [docs/estilizacao.md](docs/estilizacao.md)
 
 ## Arquitetura
 
@@ -27,6 +28,7 @@ Documentação interna:
 - [docs/mapa-do-vault.md](docs/mapa-do-vault.md) — inventário do vault
 - [docs/contrato-espelho.md](docs/contrato-espelho.md) — o que entra em `content/lore/`
 - [docs/rotas-do-site.md](docs/rotas-do-site.md) — rotas previstas
+- [docs/estilizacao.md](docs/estilizacao.md) — cores, fontes e temas
 - [docs/assets.md](docs/assets.md) — artes em `public/assets/`
 
 ## Desenvolvimento

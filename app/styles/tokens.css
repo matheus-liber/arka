@@ -1,0 +1,114 @@
+/*
+  Identidade visual de Arka.
+
+  Altere cores, fontes e tamanhos AQUI — não espalhe hex/rgb nas páginas.
+  Troque o tema no <html data-theme="..."> (layout.js) ou, no futuro, num seletor.
+
+  Temas:
+    dark           — padrão atual (crônicas, fundo profundo)
+    light          — pergaminho / dia
+    high-contrast  — bordas e texto mais nítidos
+*/
+
+:root {
+  --font-body: Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  --text-nav: 0.78rem;
+  --text-mark: 1.15rem;
+  --text-eyebrow: 0.78rem;
+  --text-body: 1.12rem;
+  --text-note: 0.92rem;
+  --text-card-title: 1.15rem;
+  --text-sigil: 1.5rem;
+  --text-landing-title: clamp(2.6rem, 8vw, 5rem);
+  --text-page-title: clamp(2rem, 5vw, 3.15rem);
+  --text-message: clamp(1.08rem, 2.5vw, 1.35rem);
+
+  --tracking-nav: 0.16em;
+  --tracking-mark: 0.18em;
+  --tracking-eyebrow: 0.24em;
+  --tracking-title: 0.02em;
+
+  --space-page-x: 1.4rem;
+  --space-page-y: 2.4rem;
+  --space-block: 2.4rem;
+  --radius-none: 0;
+  --page-max: 58rem;
+  --notice-max: 48rem;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --ink: #f0e6ce;
+  --muted-ink: #c5b997;
+  --gold: #d6b66f;
+  --deep: #111a19;
+  --panel: #1a2521;
+
+  --bg-body: linear-gradient(145deg, #111816, #20251d 52%, #101715);
+  --bg-glow: rgb(72 83 59 / 28%);
+  --bg-header: rgb(16 23 21 / 88%);
+  --bg-notice: linear-gradient(160deg, rgb(31 43 36 / 94%), rgb(21 30 27 / 96%));
+  --bg-card: rgb(26 37 33 / 55%);
+
+  --border-subtle: rgb(214 182 111 / 22%);
+  --border-default: rgb(214 182 111 / 28%);
+  --border-strong: rgb(214 182 111 / 42%);
+  --border-hover: rgb(214 182 111 / 55%);
+
+  --shadow-notice: 0 1.5rem 5rem rgb(0 0 0 / 35%), inset 0 0 3rem rgb(214 182 111 / 4%);
+  --note-muted: rgb(197 185 151 / 72%);
+  --pending-opacity: 0.72;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --ink: #1c1810;
+  --muted-ink: #5c5344;
+  --gold: #8a6a28;
+  --deep: #f4ead0;
+  --panel: #efe4c8;
+
+  --bg-body: linear-gradient(145deg, #f7f0dc, #efe6cc 52%, #e8dcb8);
+  --bg-glow: rgb(214 182 111 / 22%);
+  --bg-header: rgb(247 240 220 / 92%);
+  --bg-notice: linear-gradient(160deg, rgb(255 250 236 / 96%), rgb(239 228 200 / 96%));
+  --bg-card: rgb(255 252 244 / 80%);
+
+  --border-subtle: rgb(138 106 40 / 28%);
+  --border-default: rgb(138 106 40 / 35%);
+  --border-strong: rgb(138 106 40 / 50%);
+  --border-hover: rgb(90 68 16 / 70%);
+
+  --shadow-notice: 0 1.5rem 5rem rgb(80 60 20 / 12%), inset 0 0 3rem rgb(214 182 111 / 8%);
+  --note-muted: rgb(92 83 68 / 80%);
+  --pending-opacity: 0.78;
+}
+
+[data-theme='high-contrast'] {
+  color-scheme: dark;
+
+  --ink: #fff8e8;
+  --muted-ink: #e8d9a8;
+  --gold: #ffd35a;
+  --deep: #000;
+  --panel: #0a0a0a;
+
+  --bg-body: linear-gradient(#000, #000);
+  --bg-glow: transparent;
+  --bg-header: #000;
+  --bg-notice: #0a0a0a;
+  --bg-card: #000;
+
+  --border-subtle: #ffd35a;
+  --border-default: #ffd35a;
+  --border-strong: #ffd35a;
+  --border-hover: #fff8e8;
+
+  --shadow-notice: none;
+  --note-muted: #e8d9a8;
+  --pending-opacity: 1;
+}
