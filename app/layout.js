@@ -1,5 +1,8 @@
+import './globals.css';
+
 export const metadata = {
-  title: 'Arka',
+  title: 'Arka — Em Construção',
+  description: 'Ehvar e os Teldares estão narrando. Em breve, Arka se formará.',
 };
 
 export default function RootLayout({ children }) {
