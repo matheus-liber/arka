@@ -7,7 +7,7 @@ export default function Home() {
         <h1 id="page-title">Em Construção</h1>
         <div className="ornament" aria-hidden="true"><span />✧<span /></div>
         <p className="message">
-          Ehvar e os Teldares estão narrando.
+          Ehvar e os Eldares estão narrando.
           <br />
           <span>Em breve, Arka se formará.</span>
         </p>

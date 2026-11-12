@@ -2,7 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Arka — Em Construção',
-  description: 'Ehvar e os Teldares estão narrando. Em breve, Arka se formará.',
+  description: 'Ehvar e os Eldares estão narrando. Em breve, Arka se formará.',
 };
 
 export default function RootLayout({ children }) {
