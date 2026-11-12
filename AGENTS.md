@@ -29,7 +29,8 @@ Leia, nesta ordem, quando o trabalho envolver lore, conteúdo ou arquitetura do 
 # Regras de arquitetura
 
 - A equipe escreve no Google Drive / Obsidian. Este Git publica um **espelho** em `content/lore/`.
-- O Next.js **não** deve ler `G:\` nem qualquer caminho do Google Drive no `build` ou em runtime de produção.
+- O espelho é atualizado **nesta máquina**, quando alguém pedir — não há cron na nuvem, GitHub Action nem Drive API periódica.
+- O Next.js **não** deve ler `G:\` nem qualquer caminho do Google Drive no `build` ou em runtime de produção. A cópia para `content/lore/` acontece antes, neste PC.
 - Não copiar `.obsidian`, `.claude`, `.claudian` nem `desktop.ini` para o espelho.
 - Arquivos vazios (0 bytes) e notas `Untitled*.md` não viram página pública.
 - O glossário Tolkien → Arka em `Assets/docs/Glossário.md` é ferramenta interna da equipe. Não publicar como página de lore; no site, usar só os nomes de Arka.

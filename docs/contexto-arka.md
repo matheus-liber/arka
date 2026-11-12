@@ -44,7 +44,7 @@ Política de publicação: **o conteúdo do vault vai ao site**, inclusive mater
 
 O build **não** aponta para `G:\`. Motivo: o caminho do Drive File Stream é local e instável, arquivos “somente online” chegam com 0 bytes, e um save no Obsidian não pode quebrar produção.
 
-O sync (cron / agente) ainda não está implementado. O contrato está em [contrato-espelho.md](contrato-espelho.md). O caminho certo para o job periódico é a **Google Drive API**, não um watcher que dependa deste PC ligado. Um script local que lê o `G:\` serve só como protótipo.
+O espelho ainda não está populado. O contrato está em [contrato-espelho.md](contrato-espelho.md). A atualização é **local e sob demanda**: neste PC, a partir do vault no `G:\`, com a frequência que fizer sentido. Não há cron na nuvem, GitHub Action nem Drive API periódica.
 
 ## Estado atual do repositório
 

@@ -1,6 +1,6 @@
 # Contrato do espelho `content/lore/`
 
-O vault no Google Drive é a fonte editorial. `content/lore/` neste repositório é o snapshot que o site constrói. Este contrato vale para o agente de sync (local ou Drive API). O sync **ainda não está implementado**.
+O vault no Google Drive é a fonte editorial. `content/lore/` neste repositório é o snapshot que o site constrói. Este contrato vale para a **cópia local neste PC**. Não há cron na nuvem, GitHub Action nem Google Drive API periódica.
 
 ## Diretório de destino
 
@@ -49,7 +49,7 @@ Arquivos fora do vault (ex.: mapa de Gondávia em `G:\Meu Drive\`) não entram n
 
 Marcar (ou omitir do espelho) e **não** gerar rota:
 
-1. Arquivo com tamanho 0 bytes. O job deve tentar hidratar no Drive antes de concluir que está vazio; se continuar 0, não publica.
+1. Arquivo com tamanho 0 bytes. Antes de concluir que está vazio, garantir que o Drive Desktop hidratou o arquivo neste PC; se continuar 0, não publica.
 2. Nome `Untitled.md` ou `Untitled N.md`.
 3. Notas cujo frontmatter `status` seja claramente não-público, se a equipe passar a usar isso de forma consistente. Hoje vários artigos maduros ainda dizem `esqueleto` ou `em-desenvolvimento` — **não** usar esses valores como bloqueio de publicação.
 
@@ -81,12 +81,13 @@ A tabela de rotas canônicas está em [rotas-do-site.md](rotas-do-site.md). Slug
 
 Não expandir wikilinks no Drive. A transformação acontece só no espelho / no pipeline do site.
 
-## Como o job deve rodar
+## Como a cópia roda
 
-1. **Protótipo local:** ler o vault no `G:\` deste PC, aplicar o contrato, gravar em `content/lore/`. Útil para desenvolver o transformador. Não é o cron de produção — o PC pode estar desligado e o caminho `\.shortcut-targets-by-id\` muda.
-2. **Produção:** GitHub Action (ou equivalente) com Google Drive API, pasta `1DTqQBaxoD9p8m1jMlvLhvB9L058DP15Y`, no cron. Diff contra `content/lore/`; abrir PR (preferível) ou commit no `main` quando o vault mudar.
+Neste PC, quando for atualizar o site: ler o vault no `G:\` (atalho `G:\Meu Drive\Arka.lnk` / pasta `G:\.shortcut-targets-by-id\1DTqQBaxoD9p8m1jMlvLhvB9L058DP15Y\Arka`), aplicar este contrato, gravar em `content/lore/`, commit na branch de feature e empurrar para `development`.
 
-O Next.js só lê `content/lore/` e `app/`. Zero I/O no Google Drive em `next build` / `next start`.
+Frequência: a que for útil (várias vezes por semana, se quiser). Não há agendamento automático.
+
+O Next.js só lê `content/lore/` e `app/`. Zero I/O no Google Drive em `next build` / `next start`. O PC precisa estar ligado **só na hora da cópia**, não 24h.
 
 ## Fora deste contrato
 

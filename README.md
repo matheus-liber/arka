@@ -13,11 +13,13 @@ Hoje o site está na landing *Em Construção*. A lore vive no vault Obsidian co
 
 ```
 Equipe (Obsidian / Google Drive)
-        ↓ agente de sync (ainda não implementado)
+        ↓ cópia neste PC, sob demanda
 content/lore/   ← snapshot publicado
         ↓ Next.js
 arkarpg.com.br
 ```
+
+Não há cronjob nem GitHub Action para isso. A lore entra no site quando alguém, nesta máquina, copiar o vault para `content/lore/` e mandar o commit no fluxo Git.
 
 Documentação interna:
 
