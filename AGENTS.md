@@ -27,6 +27,7 @@ Leia, nesta ordem, quando o trabalho envolver lore, conteúdo ou arquitetura do 
 4. [docs/rotas-do-site.md](docs/rotas-do-site.md) — árvore de rotas prevista
 5. [docs/estilizacao.md](docs/estilizacao.md) — cores, fontes, temas (`app/styles/tokens.css`)
 6. [docs/assets.md](docs/assets.md) — artes em `public/assets/`
+7. [docs/referencias.md](docs/referencias.md) — padrões de enciclopédias de cenário (PF, Realms, Tolkien, Tormenta)
 
 # Regras de arquitetura
 

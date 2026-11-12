@@ -30,6 +30,7 @@ Documentação interna:
 - [docs/rotas-do-site.md](docs/rotas-do-site.md) — rotas previstas
 - [docs/estilizacao.md](docs/estilizacao.md) — cores, fontes e temas
 - [docs/assets.md](docs/assets.md) — artes em `public/assets/`
+- [docs/referencias.md](docs/referencias.md) — estrutura de wikis de RPG (referência de IA)
 
 ## Desenvolvimento
 
