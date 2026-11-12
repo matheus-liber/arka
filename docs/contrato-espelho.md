@@ -45,6 +45,8 @@ Não espelhar para a raiz do repo nem para `app/`. O `.gitkeep` desta pasta é s
 
 Arquivos fora do vault (ex.: mapa de Gondávia em `G:\Meu Drive\`) não entram neste sync. Só entram se a equipe os mover para o vault.
 
+Artes feitas para o site **não** moram no espelho: vão em [`public/assets/`](../public/assets/). `content/lore/Assets/` é só o que veio do Obsidian. Ver [assets.md](assets.md).
+
 ## Drafts — não viram página pública
 
 Marcar (ou omitir do espelho) e **não** gerar rota:

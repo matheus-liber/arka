@@ -27,6 +27,7 @@ Documentação interna:
 - [docs/mapa-do-vault.md](docs/mapa-do-vault.md) — inventário do vault
 - [docs/contrato-espelho.md](docs/contrato-espelho.md) — o que entra em `content/lore/`
 - [docs/rotas-do-site.md](docs/rotas-do-site.md) — rotas previstas
+- [docs/assets.md](docs/assets.md) — artes em `public/assets/`
 
 ## Desenvolvimento
 
