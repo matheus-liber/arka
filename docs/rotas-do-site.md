@@ -16,9 +16,9 @@ Slugs em minúsculas, sem acento, hífens. Um documento `OFICIAL —` exportado 
 | `/planos` | `01/OFICIAL — Planos de Existência — Configuração Atual` | cosmologia oficial |
 | `/mapas` | `10` — mapas planares PNG | mídia oficial |
 
-Divindades, Ehvar e Ash-Khala continuam no esqueleto do site, mas **ainda não há** `OFICIAL —` nas pastas 03–06. Não inventar artigo a partir do diretório Obsidian antigo.
+Divindades e Ehvar continuam no esqueleto (nomes do mito oficial). **Ainda não há** `OFICIAL —` nas pastas 03–06. Não inventar artigo a partir do diretório Obsidian antigo, nem destacar lugar sem documento oficial.
 
-A árvore abaixo mistura rotas publicadas (história, planos, mapas) e esqueleto. Ash-Khala e o restante da geografia não têm `OFICIAL —`.
+A árvore abaixo mistura rotas publicadas (história, planos, mapas) e esqueleto. Geografia não tem `OFICIAL —`.
 
 ## Árvore
 
@@ -42,38 +42,9 @@ A árvore abaixo mistura rotas publicadas (história, planos, mapas) e esqueleto
 /historia/primeiro-ciclo
 /historia/segundo-ciclo          só quando o markdown existir de fato
 /continentes                     só quando 03 tiver OFICIAL —
-/meridia                         Merídia.md
-/meridia/:reino                  Reinos/*.md já nomeados
-/meridia/blocos/:slug            Pacto Verde, Tratado Nórdico, …
-/valbarra
-/kabash
-/zandora                         stub até o continente ganhar texto
-/zandora/ocidental
-/zandora/ash-khala               ★ primeiro bloco de lugar
-/zandora/ash-khala/distritos
-/zandora/ash-khala/distritos/:slug
-/zandora/ash-khala/governo
-/zandora/ash-khala/pentarcas/:slug
-/zandora/ash-khala/salhum
-/zandora/ash-khala/salhum/:slug    Almirash, Zahiit, Harajûm
-/zandora/ash-khala/sigilato
-/zandora/ash-khala/sigilato/desastre
-/zandora/ash-khala/faccoes
-/zandora/ash-khala/faccoes/:slug
-/zandora/ash-khala/pessoas
-/zandora/ash-khala/pessoas/:slug
-/zandora/ash-khala/sistema         Conexão com o Sistema (PF2e)
+/meridia /valbarra /kabash /zandora
+                                 só quando 03 tiver OFICIAL —
 ```
-
-## Ash-Khala — slugs dos distritos e facções
-
-Distritos: `o-portal`, `o-limiar`, `as-lamas`, `os-entrocados`, `a-grande-promenade`, `o-anel-arcano`, `porto-das-marcas`, `a-coroa`.
-
-Facções: `cartel-da-seda`, `os-velados`, `cantico-de-abyssalite`, `confraria-dos-sem-selo`, `filhos-das-correntes`, `a-escarlate`.
-
-Pentarcas: `zandora`, `di-kabash`, `jiangsu`, `nova-solaria`, `salhum`.
-
-Pessoas (bloco novo): `casa-kodax`, `lucio-kodax`, `lion-kodax`. Não criar `/pessoas/lucio-kodax-legado`.
 
 ## O que não ganha rota
 
@@ -100,5 +71,5 @@ Colisões de nome resolvem pelo caminho do arquivo na lore oficial (pasta numera
 
 1. Landing (`/`) — já existe
 2. Exportar e publicar o que já é `OFICIAL —`: Dias Incontados, Planos de Existência, Primeiro Ciclo, mapas planares — feito
-3. Divindades listam só os nomes do mito oficial; Ash-Khala fica como índice vazio, sem o vault antigo
+3. Divindades listam só os nomes do mito oficial
 4. Geografia, povos, religiões, personagens — só quando 03–06 tiverem `OFICIAL —`
