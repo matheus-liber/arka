@@ -1,5 +1,5 @@
+import OfficialPending from '../../../../components/OfficialPending';
 import PageShell from '../../../../components/PageShell';
-import { ASH_KHALA_FACTIONS } from '../../../../lib/catalog';
 
 export const metadata = {
   title: 'Facções de Ash-Khala',
@@ -8,18 +8,12 @@ export const metadata = {
 export default function FaccoesPage() {
   return (
     <PageShell
-      eyebrow="Ash-Khala"
+      eyebrow="Geografia"
       title="Facções"
-      lede="O poder que não senta na Pentarquia. Cartéis, cultos, contrabandistas e os que recusam o selo do Sigilato."
+      lede="Sem documento OFICIAL — na lore. Os nomes de facções do vault antigo não entram no site."
+      notice={false}
     >
-      <section className="section-block">
-        <h2>Poder subterrâneo</h2>
-        <ul className="name-list">
-          {ASH_KHALA_FACTIONS.map((name) => (
-            <li key={name}>{name}</li>
-          ))}
-        </ul>
-      </section>
+      <OfficialPending folder="06 — Personagens e Organizações" subject="as facções de Ash-Khala" />
     </PageShell>
   );
 }

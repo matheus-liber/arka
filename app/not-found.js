@@ -10,8 +10,8 @@ export default function NotFound() {
       notice={false}
     >
       <p className="empty-copy">
-        Volte ao <Link href="/mundo">índice do Mundo</Link> ou à{' '}
-        <Link href="/zandora/ash-khala">Ash-Khala</Link>.
+        Volte ao <Link href="/mundo">índice do Mundo</Link>, à{' '}
+        <Link href="/historia">História</Link> ou aos <Link href="/planos">Planos</Link>.
       </p>
     </PageShell>
   );

@@ -22,7 +22,9 @@ content/lore/
     …
 ```
 
-Google Docs entram **exportados para Markdown** (ou HTML) no espelho. O Next.js não lê `.gdoc`. O `.gitkeep` de `content/lore/` é só do Git.
+Google Docs entram **exportados para Markdown** (ou texto) no espelho. O Next.js não lê `.gdoc`.
+
+Notas editoriais no fim de um Doc (`NOTAS DE CURADORIA`) **não** entram na página pública.
 
 Não espelhar para a raiz do repo nem para `app/`.
 

@@ -5,7 +5,7 @@ import { DIVINDADE_GROUPS } from '../../lib/catalog';
 
 export const metadata = {
   title: 'Divindades',
-  description: 'Ehvar, os Eldares, os Bélios e as Entidades do Vazio.',
+  description: 'Ehvar, os vinte e um Eldares e as entidades do Vazio, segundo o mito oficial.',
 };
 
 export default function DivindadesPage() {
@@ -13,7 +13,8 @@ export default function DivindadesPage() {
     <PageShell
       eyebrow="Cosmologia"
       title="Divindades"
-      lede="No princípio havia Ehvar. Dos Eldares e de seus Bélios veio a narração de Arka. Xerathis rebelou-se; Abysalith e Sutaita vieram de fora da criação."
+      lede="No princípio havia Ehvar. Dos vinte e um Eldares e de seus Bélios veio a narração de Arka. Os nomes abaixo saem do mito oficial; a pasta 05 ainda não tem artigos próprios."
+      notice={false}
     >
       {DIVINDADE_GROUPS.map((group) => (
         <section className="section-block" key={group.title}>

@@ -3,7 +3,7 @@ import PageShell from '../../../components/PageShell';
 
 export const metadata = {
   title: 'Ehvar',
-  description: 'O criador de Arka — o Ser perfeito, ápice do existir.',
+  description: 'O criador de Arka — o Ser perfeito, princípio de todas as coisas.',
 };
 
 export default function EhvarPage() {
@@ -11,15 +11,17 @@ export default function EhvarPage() {
     <PageShell
       eyebrow="O Criador"
       title="Ehvar"
-      lede="O Ser perfeito. Não é Eldar nem Bélio: é a origem. Criou os Eldares, os Bélios e convidou-os a narrar Arka à existência."
+      lede="No princípio havia Ehvar, o Ser perfeito, princípio e criador de todas as coisas. Criou os vinte e um Eldares, os Bélios, os elfos e concedeu o sopro da vida aos anões de Kharzûn."
+      notice={false}
     >
       <section className="section-block">
-        <h2>Em breve neste artigo</h2>
+        <h2>No mito oficial</h2>
         <p className="empty-copy">
-          Atos conhecidos, o respeito ao livre-arbítrio e a relação com{' '}
-          <Link href="/divindades/eldares">Xerathis e os demais Eldares</Link>. A
-          pasta <code>05 — Religiões e Divindades</code> da lore oficial ainda não
-          tem documento <code>OFICIAL —</code> para este artigo.
+          A narração de Ehvar, a recusa de anular a liberdade de Xerathis e a
+          abertura da passagem para Arka estão em{' '}
+          <Link href="/historia/dias-incontados">Dias incontados</Link>. A pasta{' '}
+          <code>05 — Religiões e Divindades</code> ainda não tem um artigo{' '}
+          <code>OFICIAL —</code> só de Ehvar.
         </p>
       </section>
     </PageShell>

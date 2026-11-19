@@ -8,7 +8,9 @@ No princípio está **Ehvar**, o criador. Ele fez vinte e um **Eldares** (em tr�
 
 Raças mortais centrais: elfos (os primeiros), anões (obra de Kharzûn, soprada por Ehvar) e humanos (Amarion e Liria, após a Fonte da Vida).
 
-A geografia, os povos e o panteão detalhado estão sendo reescritos na lore oficial (pastas 03–09 ainda vazias). O que já está oficial no Drive: mito da criação, planos de existência, Primeiro Ciclo (Guerra Planar e Grandes Marchas), mais dois mapas planares.
+Nomes oficiais da Segunda Ordem incluem **Meydris** (não Meydriss); da Terceira, **Hrothyan**. Seis Eldares da Primeira Ordem não têm nome revelado aos mortais.
+
+A geografia, os povos e o panteão detalhado estão sendo reescritos (pastas 03–09 ainda vazias). O que já está oficial: mito da criação, planos de existência, Primeiro Ciclo (Guerra Planar e Grandes Marchas) e dois mapas planares.
 
 ## Quem escreve
 
@@ -42,5 +44,5 @@ O build **não** aponta para `G:\`. Os `.gdoc` não têm o texto no disco; a có
 ## Estado atual do repositório
 
 - Landing *Em Construção* em `app/`
-- Enciclopédia esqueleto (rotas sem o texto oficial ainda)
-- `content/lore/` reservada para o espelho (hoje só `.gitkeep`)
+- Artigos oficiais no ar: Dias Incontados, Planos de Existência, Primeiro Ciclo, mapas planares
+- `content/lore/` com o espelho exportado das pastas 01, 02 e 10

@@ -1,5 +1,5 @@
+import OfficialPending from '../../../../components/OfficialPending';
 import PageShell from '../../../../components/PageShell';
-import { ASH_KHALA_DISTRICTS } from '../../../../lib/catalog';
 
 export const metadata = {
   title: 'Distritos de Ash-Khala',
@@ -8,18 +8,12 @@ export const metadata = {
 export default function DistritosPage() {
   return (
     <PageShell
-      eyebrow="Ash-Khala"
+      eyebrow="Geografia"
       title="Distritos"
-      lede="Oito distritos, do Portal à Coroa. Cada um terá artigo próprio quando o espelho da lore estiver no ar."
+      lede="Sem documento OFICIAL — na lore. Os nomes de distritos do vault antigo não entram no site."
+      notice={false}
     >
-      <section className="section-block">
-        <h2>Mapa dos distritos</h2>
-        <ul className="name-list">
-          {ASH_KHALA_DISTRICTS.map((name) => (
-            <li key={name}>{name}</li>
-          ))}
-        </ul>
-      </section>
+      <OfficialPending folder="03 — Geografia e Territórios" subject="os distritos de Ash-Khala" />
     </PageShell>
   );
 }

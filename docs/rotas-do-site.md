@@ -1,6 +1,6 @@
 # Rotas previstas do site
 
-Esboço da enciclopédia. A fonte dos textos é **Arka — Lore Oficial** (Google Docs), não o vault Obsidian. Páginas-índice do esqueleto já existem em `app/`; o corpo oficial ainda não está em `content/lore/`.
+Esboço da enciclopédia. A fonte dos textos é **Arka — Lore Oficial** (Google Docs), não o vault Obsidian. Os artigos `OFICIAL —` já exportados estão em `content/lore/` e nas rotas de história, planos e mapas.
 
 Slugs em minúsculas, sem acento, hífens. Um documento `OFICIAL —` exportado para `content/lore/` mapeia para no máximo uma rota canônica.
 
@@ -13,20 +13,22 @@ Slugs em minúsculas, sem acento, hífens. Um documento `OFICIAL —` exportado 
 | `/historia` | pasta `02` | ciclos oficiais |
 | `/historia/dias-incontados` | `01/OFICIAL — Dias Incontados — Mito da Criação` | mito da criação |
 | `/historia/primeiro-ciclo` | `02/OFICIAL — Primeiro Ciclo — Guerra Planar e Grandes Marchas` | Guerra Planar |
-| `/mapas` (a criar) | `10` — mapas planares PNG | únicos arquivos de mídia oficiais agora |
+| `/planos` | `01/OFICIAL — Planos de Existência — Configuração Atual` | cosmologia oficial |
+| `/mapas` | `10` — mapas planares PNG | mídia oficial |
 
 Divindades, Ehvar e Ash-Khala continuam no esqueleto do site, mas **ainda não há** `OFICIAL —` nas pastas 03–06. Não inventar artigo a partir do diretório Obsidian antigo.
 
-A árvore abaixo é o esqueleto já no ar. Só os artigos de história (e, quando exportados, planos e mapas) têm documento oficial no Drive hoje.
+A árvore abaixo mistura rotas publicadas (história, planos, mapas) e esqueleto. Ash-Khala e o restante da geografia não têm `OFICIAL —`.
 
 ## Árvore
 
 ```
 /                                landing (Em Construção, depois hub)
 /mundo                           índice: astros, calendário, continentes, deuses, história
-/calendario                      Calendário.md + Assets do calendário
-/astros                          índice
-/astros/seis-luas                quando deixar de ser stub
+/planos                          OFICIAL — Planos de Existência
+/mapas                           mapas planares da pasta 10
+/calendario                      só quando 01/02 tiverem calendário oficial
+/astros                          só quando houver OFICIAL —
 /divindades                      índice do panteão
 /divindades/ehvar
 /divindades/eldares
@@ -89,14 +91,14 @@ Google Docs não usam wikilinks do Obsidian. A rota canônica sai do prefixo `OF
 | --- | --- |
 | `01/OFICIAL — Dias Incontados — Mito da Criação` | `/historia/dias-incontados` |
 | `02/OFICIAL — Primeiro Ciclo — Guerra Planar e Grandes Marchas` | `/historia/primeiro-ciclo` |
-| `01/OFICIAL — Planos de Existência — Configuração Atual` | cosmologia / planos (rota a definir) |
-| mapas PNG em `10` | `/mapas` (a criar) + `public/assets/mapas/` |
+| `01/OFICIAL — Planos de Existência — Configuração Atual` | `/planos` |
+| mapas PNG em `10` | `/mapas` + `public/assets/mapas/` |
 
 Colisões de nome resolvem pelo caminho do arquivo na lore oficial (pasta numerada + título `OFICIAL —`), não pelo título sozinho.
 
 ## Ordem de implementação sugerida
 
 1. Landing (`/`) — já existe
-2. Exportar e publicar o que já é `OFICIAL —`: Dias Incontados, Planos de Existência, Primeiro Ciclo, mapas planares
-3. Manter o esqueleto de Divindades / Ash-Khala no ar como índice, sem preencher com o vault antigo
+2. Exportar e publicar o que já é `OFICIAL —`: Dias Incontados, Planos de Existência, Primeiro Ciclo, mapas planares — feito
+3. Divindades listam só os nomes do mito oficial; Ash-Khala fica como índice vazio, sem o vault antigo
 4. Geografia, povos, religiões, personagens — só quando 03–06 tiverem `OFICIAL —`

@@ -1,3 +1,4 @@
+import OfficialPending from '../../../../components/OfficialPending';
 import PageShell from '../../../../components/PageShell';
 
 export const metadata = {
@@ -7,18 +8,12 @@ export const metadata = {
 export default function SigilatoPage() {
   return (
     <PageShell
-      eyebrow="Ash-Khala"
+      eyebrow="Geografia"
       title="O Sigilato"
-      lede="O aparato que licencia e pune a magia em Ash-Khala, depois do desastre antigo que tornou a arcana livre um tabu."
+      lede="Sem documento OFICIAL — na lore."
+      notice={false}
     >
-      <section className="section-block">
-        <h2>O Desastre</h2>
-        <p className="empty-copy">
-          A Perdição, o Farol Ressonante e o Ressonador Arcano terão páginas
-          próprias neste ramo quando a lore oficial (pastas 03, 06 ou 07) tiver
-          documento <code>OFICIAL —</code> correspondente.
-        </p>
-      </section>
+      <OfficialPending folder="03 — Geografia e Territórios" subject="o Sigilato" />
     </PageShell>
   );
 }

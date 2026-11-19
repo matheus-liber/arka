@@ -24,9 +24,9 @@ export default function Home() {
         </p>
         <p className="landing-links">
           <Link href="/mundo">O Mundo</Link>
-          <Link href="/divindades">Divindades</Link>
+          <Link href="/planos">Planos</Link>
           <Link href="/historia">História</Link>
-          <Link href="/zandora/ash-khala">Ash-Khala</Link>
+          <Link href="/mapas">Mapas</Link>
         </p>
       </section>
     </main>

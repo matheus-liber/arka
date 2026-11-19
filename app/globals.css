@@ -302,3 +302,58 @@ a {
   font-size: 0.86em;
   color: var(--gold);
 }
+
+.lore-article {
+  margin-top: var(--space-block);
+}
+
+.lore-article h2 {
+  margin: 2.4rem 0 0.9rem;
+  color: var(--gold);
+  font-size: var(--text-eyebrow);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lore-article h3 {
+  margin: 1.8rem 0 0.7rem;
+  color: var(--gold);
+  font-size: var(--text-card-title);
+  font-weight: 400;
+}
+
+.lore-article p {
+  margin: 0 0 1.15rem;
+  color: var(--ink);
+  font-size: var(--text-body);
+  line-height: 1.8;
+}
+
+.lore-note {
+  color: var(--muted-ink);
+  font-size: var(--text-note);
+  font-style: italic;
+}
+
+.lore-map {
+  margin: var(--space-block) 0 0;
+}
+
+.lore-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-default);
+  background: var(--bg-card);
+}
+
+.lore-map figcaption {
+  margin-top: 0.7rem;
+  color: var(--muted-ink);
+  font-size: var(--text-note);
+}
+
+.lore-map a {
+  color: var(--gold);
+}

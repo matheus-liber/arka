@@ -1,25 +1,23 @@
+import LoreArticle from '../../../components/LoreArticle';
 import PageShell from '../../../components/PageShell';
+import { LORE_FILES, parseLore, readLoreFile } from '../../../lib/lore';
 
 export const metadata = {
   title: 'Primeiro ciclo',
-  description: 'A descida dos Teldares e as Grandes Marchas de Xerathis.',
+  description: 'Guerra planar, Grandes Marchas e a queda dos elfos.',
 };
 
 export default function PrimeiroCicloPage() {
+  const blocks = parseLore(readLoreFile(LORE_FILES.primeiroCiclo));
+
   return (
     <PageShell
       eyebrow="História"
       title="Primeiro ciclo"
-      lede="Os Teldares em Arka, as Grandes Marchas de Xerathis, o surgir dos anões e a longa resistência em Valbarra."
+      lede="Da Fonte da Vida à guerra pelos dezoito planos, às dez Grandes Marchas e à chegada dos homens."
+      notice={false}
     >
-      <section className="section-block">
-        <h2>O artigo</h2>
-        <p className="empty-copy">
-          O artigo sai de{' '}
-          <code>Arka — Lore Oficial/02 — História e Cronologia/OFICIAL — Primeiro Ciclo — Guerra Planar e Grandes Marchas</code>
-          {' '}depois de exportar o Google Doc para o espelho.
-        </p>
-      </section>
+      <LoreArticle blocks={blocks} skipTitle />
     </PageShell>
   );
 }

@@ -1,22 +1,22 @@
-import EntryList from '../../../components/EntryList';
+import OfficialPending from '../../../components/OfficialPending';
 import PageShell from '../../../components/PageShell';
-import { ASH_KHALA_SECTIONS } from '../../../lib/catalog';
 
 export const metadata = {
   title: 'Ash-Khala',
-  description: 'A Joia do Ocidente — metrópole costeira de Zandora Ocidental.',
+  description: 'Lugar ainda sem documento oficial na lore.',
 };
 
 export default function AshKhalaPage() {
   return (
     <PageShell
-      eyebrow="Zandora Ocidental"
+      eyebrow="Geografia"
       title="Ash-Khala"
-      lede="A maior metrópole costeira de Zandora Ocidental. Vende-se como próspera, segura e gloriosa. Por baixo da fachada: corrupção, desigualdade e magia sob o Sigilato. Governada pela Pentarquia."
+      lede="A pasta 03 — Geografia e Territórios da lore oficial ainda está vazia. Não há artigo OFICIAL — sobre este lugar."
+      notice={false}
     >
       <section className="section-block">
-        <h2>Blocos de lore</h2>
-        <EntryList items={ASH_KHALA_SECTIONS} />
+        <h2>Ainda não publicado</h2>
+        <OfficialPending folder="03 — Geografia e Territórios" subject="Ash-Khala" />
       </section>
     </PageShell>
   );

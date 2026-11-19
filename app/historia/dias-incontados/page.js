@@ -1,25 +1,23 @@
+import LoreArticle from '../../../components/LoreArticle';
 import PageShell from '../../../components/PageShell';
+import { LORE_FILES, parseLore, readLoreFile } from '../../../lib/lore';
 
 export const metadata = {
   title: 'Dias incontados',
-  description: 'A Narração da Criação — pré-história de Arka.',
+  description: 'O mito oficial da criação de Arka.',
 };
 
 export default function DiasIncontadosPage() {
+  const blocks = parseLore(readLoreFile(LORE_FILES.diasIncontados));
+
   return (
     <PageShell
       eyebrow="História"
       title="Dias incontados"
-      lede="A Narração da Criação: Ehvar, os vinte e um Eldares, os Bélios e o surgir de Arka, dos elfos e da Fonte da Vida."
+      lede="A Narração da Criação: Ehvar, os vinte e um Eldares, os Bélios, o surgir de Arka, dos elfos e a descida dos Teldares."
+      notice={false}
     >
-      <section className="section-block">
-        <h2>O artigo</h2>
-        <p className="empty-copy">
-          O artigo sai de{' '}
-          <code>Arka — Lore Oficial/01 — Cosmologia e Criação/OFICIAL — Dias Incontados — Mito da Criação</code>
-          {' '}depois de exportar o Google Doc para o espelho.
-        </p>
-      </section>
+      <LoreArticle blocks={blocks} skipTitle />
     </PageShell>
   );
 }

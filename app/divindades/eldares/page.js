@@ -1,28 +1,30 @@
+import EntryList from '../../../components/EntryList';
 import PageShell from '../../../components/PageShell';
 import { DIVINDADE_GROUPS } from '../../../lib/catalog';
 
 export const metadata = {
   title: 'Eldares',
-  description: 'Os filhos de Ehvar. Os que desceram a Arka são os Teldares.',
+  description: 'Os vinte e um filhos de Ehvar. Os quinze que desceram a Arka são os Teldares.',
 };
 
-const eldares = DIVINDADE_GROUPS.find((group) => group.title === 'Eldares').items;
+const orders = DIVINDADE_GROUPS.filter((group) =>
+  group.title.endsWith('Ordem'),
+);
 
 export default function EldaresPage() {
   return (
     <PageShell
       eyebrow="Divindades"
       title="Eldares"
-      lede="Vinte e um, em três ordens. Os que desceram ao mundo são chamados Teldares. Xerathis, o maior da primeira ordem, rebelou-se."
+      lede="Vinte e um, em três Ordens de sete. Quinze desceram a Arka e passaram a ser chamados Teldares. Os seis da Primeira Ordem, salvo Xerathis, permaneceram com Ehvar. Os nomes seguem o mito oficial dos Dias Incontados."
+      notice={false}
     >
-      <section className="section-block">
-        <h2>Nomes</h2>
-        <ul className="name-list">
-          {eldares.map((item) => (
-            <li key={item.title}>{item.title}</li>
-          ))}
-        </ul>
-      </section>
+      {orders.map((group) => (
+        <section className="section-block" key={group.title}>
+          <h2>{group.title}</h2>
+          <EntryList items={group.items} />
+        </section>
+      ))}
     </PageShell>
   );
 }
