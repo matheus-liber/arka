@@ -1,23 +1,23 @@
 # Rotas previstas do site
 
-Esboço alinhado à taxonomia do vault. Nenhuma dessas rotas de enciclopédia está implementada ainda — `app/` só tem a landing.
+Esboço da enciclopédia. A fonte dos textos é **Arka — Lore Oficial** (Google Docs), não o vault Obsidian. Páginas-índice do esqueleto já existem em `app/`; o corpo oficial ainda não está em `content/lore/`.
 
-Slugs em minúsculas, sem acento, hífens. Uma nota no espelho (`content/lore/...`) mapeia para no máximo uma rota canônica.
+Slugs em minúsculas, sem acento, hífens. Um documento `OFICIAL —` exportado para `content/lore/` mapeia para no máximo uma rota canônica.
 
-## Implementar primeiro
+## Implementar primeiro (há texto oficial no Drive)
 
-| Rota | Fonte no vault | Motivo |
+| Rota | Fonte na lore oficial | Motivo |
 | --- | --- | --- |
 | `/` | `app/page.js` | landing atual |
-| `/mundo` | `O Mundo/O Mundo.md` | índice da enciclopédia |
-| `/divindades` | `O Mundo/Divindades/Divindades.md` | panteão maduro |
-| `/divindades/ehvar` | `O Mundo/Divindades/Ehvar.md` | criador |
-| `/historia` | pasta `História Geral` | ciclo 0 e 1 já são artigos longos |
-| `/historia/dias-incontados` | `0 - Dias incontados.md` | criação |
-| `/historia/primeiro-ciclo` | `1 - Primeiro ciclo.md` | Marchas |
-| `/zandora/ash-khala` | `.../Ash-Khala.md` | primeiro bloco de **lugar** completo |
+| `/mundo` | índice | hub da enciclopédia |
+| `/historia` | pasta `02` | ciclos oficiais |
+| `/historia/dias-incontados` | `01/OFICIAL — Dias Incontados — Mito da Criação` | mito da criação |
+| `/historia/primeiro-ciclo` | `02/OFICIAL — Primeiro Ciclo — Guerra Planar e Grandes Marchas` | Guerra Planar |
+| `/mapas` (a criar) | `10` — mapas planares PNG | únicos arquivos de mídia oficiais agora |
 
-Ash-Khala é o primeiro lugar a ganhar árvore própria (distritos, governo, facções). Cosmologia e história abrem o site; Ash-Khala mostra profundidade de campanha.
+Divindades, Ehvar e Ash-Khala continuam no esqueleto do site, mas **ainda não há** `OFICIAL —` nas pastas 03–06. Não inventar artigo a partir do diretório Obsidian antigo.
+
+A árvore abaixo é o esqueleto já no ar. Só os artigos de história (e, quando exportados, planos e mapas) têm documento oficial no Drive hoje.
 
 ## Árvore
 
@@ -39,7 +39,7 @@ Ash-Khala é o primeiro lugar a ganhar árvore própria (distritos, governo, fac
 /historia/dias-incontados
 /historia/primeiro-ciclo
 /historia/segundo-ciclo          só quando o markdown existir de fato
-/continentes                     Continentes.md (sem listar Untitled como página)
+/continentes                     só quando 03 tiver OFICIAL —
 /meridia                         Merídia.md
 /meridia/:reino                  Reinos/*.md já nomeados
 /meridia/blocos/:slug            Pacto Verde, Tratado Nórdico, …
@@ -75,31 +75,28 @@ Pessoas (bloco novo): `casa-kodax`, `lucio-kodax`, `lion-kodax`. Não criar `/pe
 
 ## O que não ganha rota
 
-- `Untitled*.md` e arquivos 0 bytes — ver [contrato-espelho.md](contrato-espelho.md)
-- `Assets/docs/Glossário.md`
-- `Mito da criação.md` vazio (o canônico é `/historia/dias-incontados`)
-- Tooling do vault (`.obsidian`, `.claude`, `.claudian`)
-- Ciclos 2–4 enquanto permanecerem vazios
+- Pasta `99 — Rascunhos e Propostas`
+- Pasta `00 — Diretrizes e Índices` (AGENTS, changelog, glossário)
+- Qualquer Doc sem prefixo `OFICIAL —`
+- Pastas 03–09 enquanto estiverem vazias
+- O vault Obsidian antigo
 
-## Wikilinks → rotas (exemplos)
+## Docs → rotas
 
-| Wikilink | Rota |
+Google Docs não usam wikilinks do Obsidian. A rota canônica sai do prefixo `OFICIAL —` e da pasta numerada:
+
+| Documento | Rota |
 | --- | --- |
-| `[[Ehvar]]` | `/divindades/ehvar` |
-| `[[Eldares/Xerathis\|Xerathis]]` | `/divindades/eldares/xerathis` |
-| `[[0 - Dias incontados]]` | `/historia/dias-incontados` |
-| `[[Ash-Khala]]` | `/zandora/ash-khala` |
-| `[[O Portal]]` (contexto Ash-Khala) | `/zandora/ash-khala/distritos/o-portal` |
-| `[[Kabash]]` | `/kabash` |
-| `[[Valbarra]]` | `/valbarra` |
+| `01/OFICIAL — Dias Incontados — Mito da Criação` | `/historia/dias-incontados` |
+| `02/OFICIAL — Primeiro Ciclo — Guerra Planar e Grandes Marchas` | `/historia/primeiro-ciclo` |
+| `01/OFICIAL — Planos de Existência — Configuração Atual` | cosmologia / planos (rota a definir) |
+| mapas PNG em `10` | `/mapas` (a criar) + `public/assets/mapas/` |
 
-Colisões de nome (vários `Untitled`, ou o mesmo rótulo em pastas diferentes) resolvem pelo caminho da nota no vault, não pelo título sozinho.
+Colisões de nome resolvem pelo caminho do arquivo na lore oficial (pasta numerada + título `OFICIAL —`), não pelo título sozinho.
 
 ## Ordem de implementação sugerida
 
 1. Landing (`/`) — já existe
-2. Casca da enciclopédia: `/mundo`, `/divindades`, `/historia` e as páginas já densas (Ehvar, ciclos 0–1, lista de Eldares)
-3. **Ash-Khala** e filhos (distritos → governo/pentarcas → facções → pessoas → sistema)
-4. Kabash e Merídia (reinos que já têm arquivo nomeado)
-5. Calendário, astros, mapas — quando os assets estiverem no espelho e as notas deixarem de ser stub
-6. Resto dos continentes quando o vault sair de `Untitled`
+2. Exportar e publicar o que já é `OFICIAL —`: Dias Incontados, Planos de Existência, Primeiro Ciclo, mapas planares
+3. Manter o esqueleto de Divindades / Ash-Khala no ar como índice, sem preencher com o vault antigo
+4. Geografia, povos, religiões, personagens — só quando 03–06 tiverem `OFICIAL —`

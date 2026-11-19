@@ -17,8 +17,9 @@ export default function EhvarPage() {
         <h2>Em breve neste artigo</h2>
         <p className="empty-copy">
           Atos conhecidos, o respeito ao livre-arbítrio e a relação com{' '}
-          <Link href="/divindades/eldares">Xerathis e os demais Eldares</Link>. O
-          texto integral está no vault, em <code>O Mundo/Divindades/Ehvar.md</code>.
+          <Link href="/divindades/eldares">Xerathis e os demais Eldares</Link>. A
+          pasta <code>05 — Religiões e Divindades</code> da lore oficial ainda não
+          tem documento <code>OFICIAL —</code> para este artigo.
         </p>
       </section>
     </PageShell>

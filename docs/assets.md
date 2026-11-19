@@ -24,15 +24,13 @@ public/assets/
   ui/                 chrome, ornamentos, ícones do site
 ```
 
-Espelha a taxonomia da enciclopédia ([rotas-do-site.md](rotas-do-site.md)), não a pasta do Obsidian. Exemplo: retrato de Xerathis → `public/assets/divindades/eldares/xerathis.webp`, usado em `/divindades/eldares/xerathis`.
+Espelha a taxonomia da enciclopédia ([rotas-do-site.md](rotas-do-site.md)), não as pastas numeradas do Drive. Exemplo: retrato de Xerathis → `public/assets/divindades/eldares/xerathis.webp`.
 
 Nomes de arquivo: slug em minúsculas e hífens, igual à rota (`o-portal.webp`, não `O Portal.PNG`).
 
 ## O que não entra aqui
 
-O vault Obsidian tem a própria pasta `Assets/` (calendário, PDF, etc.). Isso, quando copiado, vai para `content/lore/Assets/` — é o espelho editorial, não a galeria do site. Artes feitas para o site (retratos, mapas finais, UI) nascem em `public/assets/`.
-
-Se uma imagem do vault precisar aparecer no site, copie-a para o caminho certo em `public/assets/` (não sirva o `content/lore/` como pasta de mídia).
+Mapas e mídia oficiais nascem em `Arka — Lore Oficial/10 — Recursos Visuais e Multimídia`. Para o site servir o arquivo, copie para `public/assets/` (ex.: os mapas planares → `public/assets/mapas/`). Não sirva `content/lore/` como pasta de mídia.
 
 ## Git
 

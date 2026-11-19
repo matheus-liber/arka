@@ -15,8 +15,9 @@ export default function DiasIncontadosPage() {
       <section className="section-block">
         <h2>O artigo</h2>
         <p className="empty-copy">
-          O texto canônico (~33 KB no vault) será publicado aqui a partir de{' '}
-          <code>O Mundo/História Geral/0 - Dias incontados.md</code>.
+          O artigo sai de{' '}
+          <code>Arka — Lore Oficial/01 — Cosmologia e Criação/OFICIAL — Dias Incontados — Mito da Criação</code>
+          {' '}depois de exportar o Google Doc para o espelho.
         </p>
       </section>
     </PageShell>

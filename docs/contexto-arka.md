@@ -8,46 +8,39 @@ No princípio está **Ehvar**, o criador. Ele fez vinte e um **Eldares** (em tr�
 
 Raças mortais centrais: elfos (os primeiros), anões (obra de Kharzûn, soprada por Ehvar) e humanos (Amarion e Liria, após a Fonte da Vida).
 
-A geografia ainda está se organizando no vault. Aparecem, entre outros:
-
-- **Valbarra** — continente do conflito primordial (elfos, anões, Marchas)
-- **Merídia** — muitos reinos e blocos políticos (Nova Solária, Tratado Nórdico, Aliança, etc.)
-- **Zandora** — sul; o detalhe atual é a metrópole **Ash-Khala** (Pentarquia, hub comercial)
-- **Kabash** (Di-Kabash) — teocracia faraônica, a mais antiga nação humana, culto das Aves do Deserto
-- **Lunathar**, **Endor**, **Azhara / Salhum** — citados na lore, pouco indexados como pasta
-
-Ash-Khala é o hub narrativo mais escrito: cidade-estado costeira de Zandora Ocidental, fachada próspera, miolo de corrupção, magia controlada pelo **Sigilato**.
+A geografia, os povos e o panteão detalhado estão sendo reescritos na lore oficial (pastas 03–09 ainda vazias). O que já está oficial no Drive: mito da criação, planos de existência, Primeiro Ciclo (Guerra Planar e Grandes Marchas), mais dois mapas planares.
 
 ## Quem escreve
 
-Vários criadores brasileiros; o detalhamento da equipe fica para depois. A lore canônica está num **vault Obsidian compartilhado** no Google Drive, não neste Git.
+Vários criadores brasileiros. A lore **canônica** está em:
 
-- Atalho no Explorer: `G:\Meu Drive\Arka.lnk`
-- Pasta real neste PC: `G:\.shortcut-targets-by-id\1DTqQBaxoD9p8m1jMlvLhvB9L058DP15Y\Arka`
-- ID da pasta no Drive: `1DTqQBaxoD9p8m1jMlvLhvB9L058DP15Y`
+**`G:\Meu Drive\Arka — Lore Oficial`**
+
+Textos em Google Docs (`.gdoc` neste PC). Não usar o diretório antigo `Arka` (vault Obsidian, `Arka.lnk`). Não usar `Arka — Curadoria` como fonte do site.
+
+Inventário: [mapa-do-vault.md](mapa-do-vault.md).
 
 ## O site
 
 Domínio: [https://arkarpg.com.br](https://arkarpg.com.br)
 
-Objetivo: disponibilizar a lore do cenário — mapas, deuses, histórias, eventos, lugares, facções e, no caso de Ash-Khala, também as notas de conexão com Pathfinder 2e.
+Objetivo: disponibilizar a lore oficial do cenário — cosmologia, história, mapas, e o restante quando as pastas 03–09 tiverem documentos `OFICIAL —`.
 
-Política de publicação: **o conteúdo do vault vai ao site**, inclusive material de campanha (facções subterrâneas, NPCs, mecânicas). Exceção: o [glossário interno Tolkien → Arka](mapa-do-vault.md#glossario-interno) não vira página pública; o site usa só os nomes de Arka.
+Política de publicação: só o que estiver marcado **OFICIAL —** nas pastas 01–10. Pasta 99 (rascunhos) e pasta 00 (diretrizes) não viram enciclopédia.
 
 ## Fonte editorial vs fonte de publicação
 
 | Papel | Onde | Quem usa |
 | --- | --- | --- |
-| Fonte editorial | Google Drive / Obsidian | Equipe criativa |
-| Fonte de publicação | `content/lore/` neste repositório | Next.js, CI, Vercel |
+| Fonte editorial | `G:\Meu Drive\Arka — Lore Oficial` (Google Docs) | Equipe criativa |
+| Fonte de publicação | `content/lore/` neste repositório (Markdown exportado) | Next.js, CI, Vercel |
+| Artes do site | `public/assets/` | Visitantes |
 | Site | `app/` | Visitantes em arkarpg.com.br |
 
-O build **não** aponta para `G:\`. Motivo: o caminho do Drive File Stream é local e instável, arquivos “somente online” chegam com 0 bytes, e um save no Obsidian não pode quebrar produção.
-
-O espelho ainda não está populado. O contrato está em [contrato-espelho.md](contrato-espelho.md). A atualização é **local e sob demanda**: neste PC, a partir do vault no `G:\`, com a frequência que fizer sentido. Não há cron na nuvem, GitHub Action nem Drive API periódica.
+O build **não** aponta para `G:\`. Os `.gdoc` não têm o texto no disco; a cópia é exportar o Doc e gravar Markdown em `content/lore/`. Contrato: [contrato-espelho.md](contrato-espelho.md). Local e sob demanda; sem cron na nuvem.
 
 ## Estado atual do repositório
 
 - Landing *Em Construção* em `app/`
-- Documentação de contexto em `docs/`
-- Pasta `content/lore/` reservada para o espelho (hoje só `.gitkeep`)
+- Enciclopédia esqueleto (rotas sem o texto oficial ainda)
+- `content/lore/` reservada para o espelho (hoje só `.gitkeep`)

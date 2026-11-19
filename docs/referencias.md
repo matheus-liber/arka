@@ -64,7 +64,7 @@ Não improvisam a estrutura a cada nota. Tipos estáveis:
 7. Religião
 8. Festas, símbolos, referências
 
-Ash-Khala no vault já cai neste molde: distritos, Pentarquia, facções, pessoas, Sigilato, sistema.
+Ash-Khala no esqueleto do site já cai neste molde: distritos, Pentarquia, facções, pessoas, Sigilato, sistema. Ainda não há documento `OFICIAL —` correspondente na lore oficial (pasta 03/06 vazias).
 
 **História** (Tolkien)
 
@@ -87,7 +87,7 @@ Mundo → continente → nação/reino → cidade → distrito.
 
 Forgotten Realms: Toril → Faerûn → Costa da Espada → Waterdeep. PathfinderWiki: Golarion → Inner Sea → Absalom → distritos.
 
-Arka já desenhou isso em [rotas-do-site.md](rotas-do-site.md). O vault ainda tem `Untitled` no meio; o site só publica o que já tem nome.
+Arka já desenhou isso em [rotas-do-site.md](rotas-do-site.md). O site só publica o que tiver `OFICIAL —` na lore oficial.
 
 ### 5. Vários eixos para o mesmo panteão
 
@@ -97,7 +97,7 @@ Ninguém lista deuses só em A–Z.
 - Forgotten Realms: panteão Faerûniano vs élfico vs anão vs Mulhorandi (egípcio — paralelo de Kabash / Aves do Deserto)
 - Tolkien: Valar / Maiar / Úmaiar, senhores e senhoras
 
-Para Arka, eixos naturais já no vault:
+Para Arka, eixos naturais (quando 05 tiver oficiais):
 
 - Ordem (Ehvar → Eldares 1ª/2ª/3ª → Bélios → Vazio)
 - Onde habitam (Lunathar, Valbarra, Campos de Junco)
@@ -123,7 +123,7 @@ Arka já cobre 2, 3 e 5 no esqueleto. Raças e organizações como portais de to
 
 ### 7. Mapas e calendário são seção, não anexo
 
-Forgotten Realms trata mapas como portal. Tolkien Gateway põe o calendário na home (“hoje no Shire”). O vault de Arka já tem calendário ritual e luas em `Assets/` — candidato a `/calendario` e `/mapas`, artes em `public/assets/mapas/`.
+Forgotten Realms trata mapas como portal. Tolkien Gateway põe o calendário na home (“hoje no Shire”). A lore oficial já tem mapas planares em `10 — Recursos Visuais e Multimídia` — candidatos a `/mapas` e `public/assets/mapas/`.
 
 ---
 
@@ -186,7 +186,7 @@ Não levar: a home como catálogo de 1.700 entradas de regra. Arka é enciclopé
 | Hub de portais | Nav: Mundo, Divindades, História, Ash-Khala | Home da enciclopédia (não só landing); portal Mapas |
 | Molde de deus | Índice de Eldares; página esqueleto de Ehvar | Infobox, seções fixas, navbox, páginas por Eldar |
 | Molde de cidade | Árvore Ash-Khala (distritos, governo, facções, pessoas, sistema) | Infobox da cidade; artigos de distrito (hoje só nomes) |
-| História em eras | Ciclos 0 e 1 no esqueleto; 2–4 vazios no vault | Linha do tempo visual; não publicar ciclos vazios |
+| História em eras | Dias Incontados e Primeiro Ciclo oficiais no Drive | Exportar para `content/lore/`; linha do tempo visual |
 | Mapas | Pasta `public/assets/mapas/` | Página `/mapas`; artes no lugar |
 | Lore + PF2e | `/zandora/ash-khala/sistema` | Infobox mecânica só onde fizer sentido; não virar AoN |
 | Busca | — | Busca (todas as wikis maduras têm) |

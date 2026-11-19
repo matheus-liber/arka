@@ -12,7 +12,7 @@ export default function HistoriaPage() {
     <PageShell
       eyebrow="Crônicas"
       title="História"
-      lede="Os Dias Incontados e o Primeiro Ciclo já estão escritos no vault. Os ciclos seguintes ainda são páginas vazias — e não entram no site até existirem de fato."
+      lede="Os Dias Incontados e o Primeiro Ciclo já existem como documentos oficiais na lore. Os ciclos seguintes só entram no site quando tiverem OFICIAL — na pasta 02."
     >
       <section className="section-block">
         <h2>Ciclos</h2>

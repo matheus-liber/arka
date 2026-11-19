@@ -2,7 +2,7 @@
 
 Site de [arkarpg.com.br](https://arkarpg.com.br): enciclopédia pública do cenário de RPG **Arka** (alta fantasia medieval brasileira, Pathfinder 2e).
 
-Hoje o site está na landing *Em Construção*. A lore vive no vault Obsidian compartilhado no Google Drive. Este repositório vai publicar um **espelho versionado** dessa lore — o Next.js não lê o Drive na hora do build.
+Hoje o site está na landing *Em Construção*. A lore canônica vive em **Arka — Lore Oficial** no Google Drive (Google Docs). Este repositório publica um **espelho** em Markdown — o Next.js não lê o Drive na hora do build.
 
 ## Stack
 
@@ -13,19 +13,19 @@ Hoje o site está na landing *Em Construção*. A lore vive no vault Obsidian co
 ## Arquitetura
 
 ```
-Equipe (Obsidian / Google Drive)
-        ↓ cópia neste PC, sob demanda
+Equipe (Google Docs em Arka — Lore Oficial)
+        ↓ exportar OFICIAL — para Markdown, neste PC
 content/lore/   ← snapshot publicado
         ↓ Next.js
 arkarpg.com.br
 ```
 
-Não há cronjob nem GitHub Action para isso. A lore entra no site quando alguém, nesta máquina, copiar o vault para `content/lore/` e mandar o commit no fluxo Git.
+Não há cronjob. A lore entra no site quando alguém exportar os Docs oficiais para `content/lore/` e seguir o fluxo Git. Não usar o diretório Obsidian `Arka`.
 
 Documentação interna:
 
 - [docs/contexto-arka.md](docs/contexto-arka.md) — o cenário, a equipe e a política de publicação
-- [docs/mapa-do-vault.md](docs/mapa-do-vault.md) — inventário do vault
+- [docs/mapa-do-vault.md](docs/mapa-do-vault.md) — inventário da lore oficial
 - [docs/contrato-espelho.md](docs/contrato-espelho.md) — o que entra em `content/lore/`
 - [docs/rotas-do-site.md](docs/rotas-do-site.md) — rotas previstas
 - [docs/estilizacao.md](docs/estilizacao.md) — cores, fontes e temas

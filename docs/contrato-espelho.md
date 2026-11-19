@@ -1,98 +1,69 @@
 # Contrato do espelho `content/lore/`
 
-O vault no Google Drive é a fonte editorial. `content/lore/` neste repositório é o snapshot que o site constrói. Este contrato vale para a **cópia local neste PC**. Não há cron na nuvem, GitHub Action nem Google Drive API periódica.
+Fonte editorial: pasta **Arka — Lore Oficial** no Google Drive (`G:\Meu Drive\Arka — Lore Oficial`). Os textos são Google Docs (`.gdoc` neste PC). `content/lore/` neste repositório é o snapshot que o site constrói.
+
+Não usar o vault Obsidian antigo (`Arka.lnk` / `shortcut-targets-by-id\...\Arka`) nem `Arka — Curadoria`.
+
+A cópia é **local e sob demanda**, neste PC. Não há cron na nuvem.
 
 ## Diretório de destino
 
-Tudo o que for publicado a partir do vault entra em `content/lore/`, preservando a árvore relativa ao raiz do vault, com as exclusões abaixo.
-
-Exemplo:
+Preservar a numeração e os nomes das pastas 00–10, sem a pasta 99.
 
 ```
 content/lore/
-  O Mundo/
-    Divindades/
-      Ehvar.md
-      Eldares/
-        Xerathis.md
-    Continentes/
-      Zandora/
-        Zandora Ocidental/
-          Ash-Khala/
-            ...
-  Assets/
-    image.png
-    Calendario_Ritual_Com_Luas_v2.pdf
+  01 — Cosmologia e Criação/
+    OFICIAL — Dias Incontados — Mito da Criação.md
+    OFICIAL — Planos de Existência — Configuração Atual.md
+  02 — História e Cronologia/
+    OFICIAL — Primeiro Ciclo — Guerra Planar e Grandes Marchas.md
+  10 — Recursos Visuais e Multimídia/
+    Mapa planar - Estrutura e coordenadas.png
+    …
 ```
 
-Não espelhar para a raiz do repo nem para `app/`. O `.gitkeep` desta pasta é só do Git; o sync deve preservá-lo e não tratá-lo como lore.
+Google Docs entram **exportados para Markdown** (ou HTML) no espelho. O Next.js não lê `.gdoc`. O `.gitkeep` de `content/lore/` é só do Git.
+
+Não espelhar para a raiz do repo nem para `app/`.
 
 ## Copiar
 
-- Markdown de lore (`.md`) que passe nos filtros de draft
-- Assets de conteúdo: imagens, PDF e outros arquivos em `Assets/` (exceto o glossário interno; ver abaixo)
-- Frontmatter YAML do Obsidian (`tipo`, `tags`, `status`, `aliases`, etc.) — vira metadata da página, sem descartar campos desconhecidos
+- Documentos com prefixo `OFICIAL —` nas pastas `01`–`10`, depois de exportar para Markdown
+- Imagens e mídia reais em `10 — Recursos Visuais e Multimídia` (PNG, etc.) — no espelho e, para o site servir, também em [`public/assets/`](../public/assets/) conforme [assets.md](assets.md)
 
 ## Não copiar
 
-- `.obsidian/`
-- `.claude/`
-- `.claudian/`
-- `desktop.ini` e outros arquivos de sistema do Drive
-- `.git` / lixo de editor
-- `Assets/docs/Glossário.md` — ferramenta interna Tolkien → Arka; não entra no espelho público
-- `Assets/docs/Merídia.docx` — fonte editorial paralela; não vira página. Se no futuro houver extração para markdown, o markdown extraído é que entra no espelho
+- Pasta `99 — Rascunhos e Propostas`
+- `00 — Diretrizes e Índices` (protocolo AGENTS, estilo literário, changelog, glossário) — não são artigos públicos
+- `desktop.ini` e lixo do Drive
+- O vault Obsidian antigo e `Arka — Curadoria`
+- Glossário de nomes como página de enciclopédia, até decisão explícita da equipe
 
-Arquivos fora do vault (ex.: mapa de Gondávia em `G:\Meu Drive\`) não entram neste sync. Só entram se a equipe os mover para o vault.
+## Drafts
 
-Artes feitas para o site **não** moram no espelho: vão em [`public/assets/`](../public/assets/). `content/lore/Assets/` é só o que veio do Obsidian. Ver [assets.md](assets.md).
+Não gerar rota para:
 
-## Drafts — não viram página pública
-
-Marcar (ou omitir do espelho) e **não** gerar rota:
-
-1. Arquivo com tamanho 0 bytes. Antes de concluir que está vazio, garantir que o Drive Desktop hidratou o arquivo neste PC; se continuar 0, não publica.
-2. Nome `Untitled.md` ou `Untitled N.md`.
-3. Notas cujo frontmatter `status` seja claramente não-público, se a equipe passar a usar isso de forma consistente. Hoje vários artigos maduros ainda dizem `esqueleto` ou `em-desenvolvimento` — **não** usar esses valores como bloqueio de publicação.
-
-Notas legado de Ash-Khala (`Personalidades.md`, `Personalidades/Lúcio Kodax (Legado).md`) podem espelhar, mas as rotas públicas devem preferir os blocos novos (Principais Personalidades). Ver [rotas-do-site.md](rotas-do-site.md).
-
-## Transformação de wikilinks
-
-O vault usa links Obsidian:
-
-```markdown
-[[Ehvar]]
-[[Eldares/Xerathis|Xerathis]]
-[[0 - Dias incontados|História Geral]]
-![[image.png]]
-![[Calendario_Ritual_Com_Luas_v2.pdf]]
-```
-
-Regras na hora do sync (ou numa passada posterior sobre o espelho):
-
-| Origem | Destino no site |
-| --- | --- |
-| `[[Nota]]` | link para a rota canônica da nota, texto = título da nota |
-| `[[caminho/Nota\|rótulo]]` | mesma rota, texto = rótulo |
-| `[[Nota#cabeçalho]]` | rota + âncora slugificada |
-| `![[arquivo.png]]` / PDF | asset em `content/lore/Assets/...`, servido pelo site |
-| Link para nota draft / Untitled / ausente | texto simples, sem href quebrado (opcional: marcar `data-missing`) |
-
-A tabela de rotas canônicas está em [rotas-do-site.md](rotas-do-site.md). Slugs: minúsculas, sem acento, hífens (`Ash-Khala` → `ash-khala`).
-
-Não expandir wikilinks no Drive. A transformação acontece só no espelho / no pipeline do site.
+1. Qualquer arquivo em `99`
+2. Google Doc sem prefixo `OFICIAL —`
+3. Pasta 01–10 ainda vazia
+4. Export com 0 bytes / falha de download
 
 ## Como a cópia roda
 
-Neste PC, quando for atualizar o site: ler o vault no `G:\` (atalho `G:\Meu Drive\Arka.lnk` / pasta `G:\.shortcut-targets-by-id\1DTqQBaxoD9p8m1jMlvLhvB9L058DP15Y\Arka`), aplicar este contrato, gravar em `content/lore/`, commit na branch de feature e empurrar para `development`.
+Neste PC, quando for atualizar o site:
 
-Frequência: a que for útil (várias vezes por semana, se quiser). Não há agendamento automático.
+1. Abrir o Doc em `G:\Meu Drive\Arka — Lore Oficial` (o `.gdoc` é só atalho; o texto está na nuvem).
+2. Exportar o `OFICIAL —` para Markdown.
+3. Gravar em `content/lore/` na pasta numerada correspondente.
+4. Copiar mapas de `10` para `public/assets/mapas/` (e opcionalmente o espelho).
+5. Commit na branch de feature e empurrar para `development`.
 
-O Next.js só lê `content/lore/` e `app/`. Zero I/O no Google Drive em `next build` / `next start`. O PC precisa estar ligado **só na hora da cópia**, não 24h.
+Frequência: a que for útil. Não há agendamento automático.
+
+O Next.js só lê `content/lore/`, `public/` e `app/`. Zero I/O no Google Drive em `next build` / `next start`.
 
 ## Fora deste contrato
 
-- Não migrar as 165 notas à mão para componentes React
 - Não bindar `fs` em `G:\` no App Router
-- Não publicar o glossário Tolkien como enciclopédia
+- Não publicar rascunhos da pasta 99
+- Não voltar a tratar o vault Obsidian como canônico

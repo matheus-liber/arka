@@ -15,8 +15,9 @@ export default function PrimeiroCicloPage() {
       <section className="section-block">
         <h2>O artigo</h2>
         <p className="empty-copy">
-          O texto canônico (~57 KB no vault) será publicado aqui a partir de{' '}
-          <code>O Mundo/História Geral/1 - Primeiro ciclo.md</code>.
+          O artigo sai de{' '}
+          <code>Arka — Lore Oficial/02 — História e Cronologia/OFICIAL — Primeiro Ciclo — Guerra Planar e Grandes Marchas</code>
+          {' '}depois de exportar o Google Doc para o espelho.
         </p>
       </section>
     </PageShell>

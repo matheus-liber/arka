@@ -15,7 +15,8 @@ export default function SigilatoPage() {
         <h2>O Desastre</h2>
         <p className="empty-copy">
           A Perdição, o Farol Ressonante e o Ressonador Arcano terão páginas
-          próprias neste ramo. Por ora o bloco existe só no vault.
+          próprias neste ramo quando a lore oficial (pastas 03, 06 ou 07) tiver
+          documento <code>OFICIAL —</code> correspondente.
         </p>
       </section>
     </PageShell>

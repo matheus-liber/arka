@@ -15,8 +15,9 @@ export default function GovernoPage() {
         <h2>A Pentarquia</h2>
         <p className="empty-copy">
           Cadeiras de Zandora, Di-Kabash, Jiangsu, Nova Solária e Salhum. Os
-          ocupantes, mandatos e o detalhe do Trono Rachado virão do vault (
-          <code>Governo.md</code> e o bloco Pentarcas).
+          ocupantes, mandatos e o detalhe do Trono Rachado entram aqui quando
+          houver documento <code>OFICIAL —</code> nas pastas 03 ou 06 da lore
+          oficial.
         </p>
       </section>
     </PageShell>
